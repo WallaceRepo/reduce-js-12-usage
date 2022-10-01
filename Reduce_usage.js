@@ -146,3 +146,22 @@ person = reduceAbort(people, (_acc, person) => {
     }, null )
     
 console.log(person)
+
+///// Find Largets Common Diviser / factor of array numbers
+function euclid(arr) {
+ const LargestCommonDiviser = (a, b) =>{
+    console.log(a, b)
+    let A = a
+    let B = b
+    while ( B > 0) {
+        const rem = A % B
+        A = B
+        B = rem
+    }
+    console.log("Common diviser" + A)
+    return A
+}
+
+return arr.reduce((result, num) => LargestCommonDiviser(result, num))
+}
+console.log(euclid( [ 9,45, 18, 90]))
